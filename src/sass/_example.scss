@@ -1,0 +1,437 @@
+// Путь к изображениям из SASS-файла всегда такой, как из папки css
+// background-image: url('../images/demo.jpg');
+$basicLightbox__background: rgba(0, 0, 0, 0.8); // Background color
+$basicLightbox__zIndex: 1000; // Stack order
+$basicLightbox__duration: 0.4s; // Transition duration
+$basicLightbox__timing: ease; // Transition timing
+
+.material-icons {
+  margin-right: 5px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.my-element-selector {
+  display: block;
+  background-color: rgb(8, 8, 8);
+  border: 5px solid red;
+  border-radius: 5px;
+  width: 50%;
+  height: 10px;
+
+  margin: 5px auto;
+}
+
+.btn-load {
+  height: 30px;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    align-items: center;
+  }
+
+  .search-form {
+    align-items: center;
+    margin-bottom: 20px;
+    & input {
+      height: 40px;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .btn-search {
+      height: 40px;
+    }
+  }
+
+  .photo-card {
+    margin-left: 0 auto;
+    max-height: 300px;
+  }
+
+  .gallery {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .card-item {
+    display: block;
+    max-height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .photo-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 12px;
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .material-icons {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 777px) {
+  .container {
+    display: block;
+    margin: 0 auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    align-items: center;
+  }
+
+  .search-form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    & input {
+      height: 40px;
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+    .btn-search {
+      height: 40px;
+    }
+  }
+
+  .photo-card {
+    margin-left: 0 auto;
+    // height: 400px;
+  }
+
+  .gallery {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .card-item {
+    display: block;
+    max-height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .photo-img {
+    display: block;
+    margin: 0 auto;
+
+    max-height: 350px;
+    max-width: 100%;
+  }
+
+  .stats {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 400px;
+    &-item {
+      display: flex;
+      align-items: center;
+
+      font-size: 18px;
+    }
+  }
+
+  .material-icons {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 778px) and (max-width: 1100px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+  }
+
+  .search-form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    & input {
+      width: 400px;
+      height: 40px;
+      margin-right: 5px;
+    }
+    .btn-search {
+      height: 40px;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+
+    margin-top: calc(-1 * 10px);
+    margin-left: calc(-1 * 10px);
+  }
+
+  .card-item {
+    display: flex;
+    flex-basis: calc(100% / 2 - 10px);
+
+    max-height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .photo-card {
+    margin: 0 auto;
+  }
+
+  .photo-img {
+    display: block;
+    margin: 0 auto;
+
+    max-height: 400px;
+    max-width: 350px;
+  }
+
+  .stats {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 250px;
+    &-item {
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+    }
+  }
+
+  .material-icons {
+    font-size: 12px;
+  }
+
+  .btn-load {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+  }
+
+  .search-form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    & input {
+      width: 400px;
+      height: 40px;
+      margin-right: 5px;
+    }
+    .btn-search {
+      height: 40px;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+
+    margin-top: calc(-1 * 10px);
+    margin-left: calc(-1 * 10px);
+  }
+
+  .card-item {
+    display: flex;
+    flex-basis: calc(100% / 3 - 10px);
+
+    max-height: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .photo-card {
+    margin: 0 auto;
+    // height: 400px;
+  }
+
+  .photo-img {
+    display: block;
+    margin: 0 auto;
+
+    max-height: 350px;
+    max-width: 300px;
+  }
+
+  .stats {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 250px;
+    &-item {
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+    }
+  }
+
+  .material-icons {
+    font-size: 12px;
+  }
+
+  .btn-load {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+  }
+
+  .search-form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    & input {
+      width: 400px;
+      height: 40px;
+      margin-right: 5px;
+    }
+    .btn-search {
+      height: 40px;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+
+    margin-top: calc(-1 * 10px);
+    margin-left: calc(-1 * 10px);
+  }
+
+  .card-item {
+    display: flex;
+    flex-basis: calc(100% / 4 - 10px);
+
+    max-height: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .photo-card {
+    margin: 0 auto;
+    // height: 400px;
+  }
+
+  .photo-img {
+    display: block;
+    margin: 0 auto;
+
+    max-height: 450px;
+    max-width: 350px;
+  }
+
+  .stats {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 250px;
+    &-item {
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+    }
+  }
+
+  .material-icons {
+    font-size: 12px;
+  }
+
+  .btn-load {
+    display: block;
+    margin-top: 10px;
+  }
+}
